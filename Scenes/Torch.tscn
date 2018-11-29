@@ -27,6 +27,6 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 script = ExtResource( 2 )
-_sections_unfolded = [ "Shadow" ]
+_sections_unfolded = [ "Shadow", "Transform", "Visibility" ]
 
 
