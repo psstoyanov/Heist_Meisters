@@ -6,7 +6,6 @@
 
 [node name="Player" instance=ExtResource( 1 )]
 
-collision_mask = 2
 script = ExtResource( 2 )
 _sections_unfolded = [ "Collision", "collision" ]
 
