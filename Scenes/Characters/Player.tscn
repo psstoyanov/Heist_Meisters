@@ -12,8 +12,4 @@ script = ExtResource( 2 )
 
 texture = ExtResource( 3 )
 
-[node name="CollisionShape2D" parent="." index="1"]
-
-visible = false
-
 

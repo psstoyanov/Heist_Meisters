@@ -27,4 +27,4 @@ func update_motion(delta):
 		motion = motion.normalized() * SPEED
 	
 	# Look at the movement direction
-	$Sprite.look_at(get_global_mouse_position())
+	look_at(get_global_mouse_position())
