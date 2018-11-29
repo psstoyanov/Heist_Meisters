@@ -28,3 +28,7 @@ func update_motion(delta):
 	
 	# Look at the movement direction
 	look_at(get_global_mouse_position())
+	
+func _input(event):
+	if Input.is_action_pressed("ui_torch"):
+		$Torch.toggle_torch()
