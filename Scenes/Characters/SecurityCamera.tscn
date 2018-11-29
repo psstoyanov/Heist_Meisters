@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GFX/PNG/Tiles/tile_463.png" type="Texture" id=1]
-[ext_resource path="res://GFX/PNG/Tiles/tile_536.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/PlayerDetection.gd" type="Script" id=2]
+[ext_resource path="res://GFX/PNG/Tiles/tile_536.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Torch.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -11,7 +12,7 @@ length = 12.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite/CameraBody:rotation_degrees")
+tracks/0/path = NodePath("CameraBody:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -49,27 +50,30 @@ modulate = Color( 0.214844, 0.209153, 0.209153, 1 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="CameraBody" type="KinematicBody2D" parent="Sprite" index="0"]
+[node name="CameraBody" type="KinematicBody2D" parent="." index="2"]
 
 rotation = 0.513246
+scale = Vector2( 1, 1 )
 input_pickable = false
 collision_layer = 4
 collision_mask = 0
 collision/safe_margin = 0.08
+script = ExtResource( 2 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Sprite" type="Sprite" parent="Sprite/CameraBody" index="0"]
+[node name="Sprite" type="Sprite" parent="CameraBody" index="0"]
 
 position = Vector2( 20, 0 )
 rotation = 1.5708
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Torch" parent="Sprite/CameraBody" index="1" instance=ExtResource( 3 )]
+[node name="Torch" parent="CameraBody" index="1" instance=ExtResource( 4 )]
 
-offset = Vector2( 360, 0 )
+scale = Vector2( 2, 2 )
+offset = Vector2( 345, 0 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/CameraBody" index="2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraBody" index="2"]
 
 shape = SubResource( 2 )
 
