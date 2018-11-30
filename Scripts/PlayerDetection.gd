@@ -3,7 +3,7 @@ extends "res://Scripts/Character.gd"
 const FOV_TOLERANCE = 20
 const RED = Color(1, .25, .25)
 const WHITE = Color(1, 1, 1)
-const MAX_DETECTION_RANGE = 400
+const MAX_DETECTION_RANGE = 340
 
 # Make this Level Neutral
 onready var Player = get_node("/root/Level1/Player")
