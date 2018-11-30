@@ -37,4 +37,13 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 
+[node name="VisionModeTimer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="VisionModeTimer" to="." method="_on_VisionModeTimer_timeout"]
+
 

@@ -1,22 +1,28 @@
 extends "res://Scripts/PlayerDetection.gd"
 
+
 var motion = Vector2()
 var possible_destinations = []
 var path = []
 var destination = Vector2()
 
+
 export var walk_slowdown = 0.5
 export var nav_stop_threshold = 5
 
+
 onready var navigation = Global.navigation
 onready var available_destinations = Global.destinations
+
 
 func _ready():
 	possible_destinations = available_destinations.get_children()
 	make_path()
 
+
 func _process(delta):
 	navigate()
+
 
 func navigate():
 	var distance_to_destination = position.distance_to(path[0])
@@ -26,6 +32,7 @@ func navigate():
 		move()
 	else:
 		update_path()
+
 
 func move():
 	look_at(destination)
@@ -38,7 +45,7 @@ func make_path():
 	var next_destination = possible_destinations[randi() % possible_destinations.size()]
 	
 	path = navigation.get_simple_path(global_position, next_destination.global_position, false)
-	print(path)
+
 
 func update_path():
 	if path.size() == 1:
