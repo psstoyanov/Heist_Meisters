@@ -2,6 +2,8 @@ extends "res://Scripts/Character.gd"
 
 var motion = Vector2()
 
+func _ready():
+	Global.Player = self
 
 func _process(delta):
 	update_motion(delta)
