@@ -6,14 +6,22 @@ const WHITE = Color(1, 1, 1)
 const MAX_DETECTION_RANGE = 340
 
 # Make this Level Neutral
-onready var Player = get_node("/root/Level1/Player")
+onready var Player = Global.Player
 
+func _ready():
+	add_to_group("NPC")
 
 func _process(delta):
 	if Player_is_in_FOV_TOLERANCE() and Player_is_on_LOS():
-		$Torch.color = RED
+		if $Torch:
+			$Torch.color = RED
+		else:
+			print(String(self.name) + " Torch is missing")
 	else:
-		$Torch.color = WHITE
+		if $Torch:
+			$Torch.color = WHITE
+		else:
+			print(String(self.name) + " Torch is missing")
 
 
 func Player_is_in_FOV_TOLERANCE():
@@ -37,3 +45,19 @@ func Player_is_on_LOS():
 		return true
 	else:
 		return false
+
+
+func Nightvision_Mode():
+	if $Torch:
+		$Torch.enabled = false
+	else:
+		print(String(self.name) + " doesn't have a torch")
+
+
+func Darkvision_Mode():
+	if $Torch:
+		$Torch.enabled = true
+	else:
+		print(String(self.name) + " doesn't have a torch")
+
+
