@@ -2,134 +2,134 @@
 
 [ext_resource path="res://GFX/Tilesheet/tilesheet_complete.png" type="Texture" id=1]
 
-[sub_resource type="OccluderPolygon2D" id=14]
+[sub_resource type="OccluderPolygon2D" id=1]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -16.3327, -20.1461, 18.6546, -20.4681, 19.6699, -15.716, 25.391, -15.5186, 25.8152, 16.8805, 22.1557, 18.1538, 22.4654, 21.009, -21.7628, 22.6773, -23.1562, 20.2448, -25.6208, 19.1878, -25.9302, -14.8466, -20.3507, -15.0558, -20.2734, -19.5499 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 24.6273, 20.8785 )
 
-[sub_resource type="OccluderPolygon2D" id=15]
+[sub_resource type="OccluderPolygon2D" id=3]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -25.3676, -16.1378, -19.9219, -16.274, -18.0159, -19.4053, 14.386, -20.086, 19.151, -16.8185, 25.5497, -14.5041, 25.9581, 13.9496, 20.6485, 21.4374, -20.6026, 20.7567, -25.3676, 15.5833, -25.5037, -13.0066 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 25.5349, 20.587 )
 
-[sub_resource type="OccluderPolygon2D" id=24]
+[sub_resource type="OccluderPolygon2D" id=5]
 
 closed = true
 cull_mode = 0
 polygon = PoolVector2Array(  )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 49.5358, 12.4363 )
 
-[sub_resource type="OccluderPolygon2D" id=25]
+[sub_resource type="OccluderPolygon2D" id=7]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -39.0881, -21.6591, 38.6818, -21.8665, 40.9631, -20, 41.7926, 19.196, 39.304, 23.1364, -38.4659, 22.0994, -41.5767, 19.6108, -41.9915, -19.3778 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 40.2065, 21.5051 )
 
-[sub_resource type="OccluderPolygon2D" id=16]
+[sub_resource type="OccluderPolygon2D" id=9]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -20.3208, 11.4991, -23.1797, 8.50392, -23.7243, -20.2221, -14.1944, -21.1751, -10.2462, -18.0438, 9.35826, -18.18, 13.4425, -20.9028, 22.5641, -20.9028, 22.8363, 7.55093, 11.6727, 20.2122, -9.15709, 19.9399, -19.0955, 12.9966 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
 extents = Vector2( 23.3106, 20.9242 )
 
-[sub_resource type="OccluderPolygon2D" id=17]
+[sub_resource type="OccluderPolygon2D" id=11]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -30.0983, 0.0521126, -25.8299, -14.8084, -17.4511, -24.1358, -3.381, -29.6689, 10.8472, -27.6138, 20.1745, -22.2387, 28.5533, -8.48478, 30.1342, 4.16247, 24.443, 17.9164, 15.9061, 25.6628, 2.31027, 30.4055, -14.4473, 26.9275, -23.4585, 18.2325, -29.9352, 5.50879 )
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=12]
 
 custom_solver_bias = 0.0
 radius = 29.9752
 
-[sub_resource type="OccluderPolygon2D" id=18]
+[sub_resource type="OccluderPolygon2D" id=13]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( 29.3417, -29.2109, -28.9598, -29.2109, -28.3992, 29.2775, 29.5286, 29.2775, 29.7155, -26.5948 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=14]
 
 custom_solver_bias = 0.0
 extents = Vector2( 29.3805, 29.3624 )
 
-[sub_resource type="OccluderPolygon2D" id=19]
+[sub_resource type="OccluderPolygon2D" id=15]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -93.5309, -23.447, -93.066, 16.7594, -80.2517, 30.2065, 78.2654, 30.8393, 92.8198, 18.3414, 94.56, 11.3806, 94.0854, -26.5876, 91.396, -30.2262, 72.0955, -30.2262, 69.7225, -26.5876, -69.3359, -26.4294, -72.1835, -29.5934, -91.0094, -29.5934, -93.857, -27.2204 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=16]
 
 custom_solver_bias = 0.0
 extents = Vector2( 91.7063, 28.2076 )
 
-[sub_resource type="OccluderPolygon2D" id=20]
+[sub_resource type="OccluderPolygon2D" id=17]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -11.8808, -10.8181, -0.735916, -17.0955, 9.70534, -16.3045, 18.09, -8.07808, 18.5646, 5.84357, 9.23073, 13.9118, -2.00151, 15.4938, -10.8607, 8.53299, -14.0463, -6.36674 )
 
-[sub_resource type="CircleShape2D" id=13]
+[sub_resource type="CircleShape2D" id=18]
 
 custom_solver_bias = 0.0
 radius = 16.9477
 
-[sub_resource type="OccluderPolygon2D" id=21]
+[sub_resource type="OccluderPolygon2D" id=19]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -23.4673, -24.3727, -9.38742, -28.0114, 0.262848, -31.0172, 8.64746, -26.904, 18.6141, -27.5368, 27.9479, -18.0447, 28.1061, -6.65427, 31.903, -1.11726, 26.9987, 10.115, 26.6823, 20.8726, 16.7157, 28.7827, 9.75488, 28.7827, 1.68665, 30.5229, -7.0144, 27.9917, -18.4048, 28.1499, -28.3715, 19.2906, -28.0551, 9.00759, -31.3773, -0.00984955, -27.8969, -9.02728, -27.1059, -21.0505 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=20]
 
 custom_solver_bias = 0.0
 extents = Vector2( 26.4644, 27.1895 )
 
-[sub_resource type="OccluderPolygon2D" id=23]
+[sub_resource type="OccluderPolygon2D" id=21]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -91.905, -29.3456, 92.9113, -29.1599, 93.4686, 28.9783, -93.3909, 29.5356, -94.1339, -27.3024 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=22]
 
 custom_solver_bias = 0.0
 extents = Vector2( 91.5274, 28.6468 )
 
-[sub_resource type="OccluderPolygon2D" id=22]
+[sub_resource type="OccluderPolygon2D" id=23]
 
 closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -10.0567, -11.3819, -4.18689, -12.9827, 2.61679, -13.6497, 9.15366, -12.8493, 13.2892, -6.57925, 15.0235, -0.842827, 14.0897, 6.89468, 9.82068, 12.7645, 3.01703, 15.6994, -5.38751, 13.9652, -10.3235, 11.6973, -12.458, 6.76128, -13.6587, 0.357819, -13.9255, -5.1118, -12.0578, -9.38077 )
 
-[sub_resource type="CircleShape2D" id=10]
+[sub_resource type="CircleShape2D" id=24]
 
 custom_solver_bias = 0.0
 radius = 14.9227
@@ -143,12 +143,12 @@ radius = 14.9227
 0/region = Rect2( 896, 1216, 64, 64 )
 0/is_autotile = false
 0/occluder_offset = Vector2( 32, 32 )
-0/occluder = SubResource( 14 )
+0/occluder = SubResource( 1 )
 0/navigation_offset = Vector2( 32, 32 )
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32.4 )
 } ]
 1/name = "OfficeSofa"
@@ -158,12 +158,12 @@ radius = 14.9227
 1/region = Rect2( 1152, 1152, 64, 64 )
 1/is_autotile = false
 1/occluder_offset = Vector2( 32, 32 )
-1/occluder = SubResource( 15 )
+1/occluder = SubResource( 3 )
 1/navigation_offset = Vector2( 32, 32 )
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 2 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32.5 )
 } ]
 2/name = "OfficeSofa2"
@@ -173,12 +173,12 @@ radius = 14.9227
 2/region = Rect2( 1152, 1088, 64, 64 )
 2/is_autotile = false
 2/occluder_offset = Vector2( 32, 32 )
-2/occluder = SubResource( 16 )
+2/occluder = SubResource( 9 )
 2/navigation_offset = Vector2( 32, 32 )
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 3 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 31.5 )
 } ]
 3/name = "OfficeTable"
@@ -188,12 +188,12 @@ radius = 14.9227
 3/region = Rect2( 1216, 1152, 64, 64 )
 3/is_autotile = false
 3/occluder_offset = Vector2( 32, 32 )
-3/occluder = SubResource( 17 )
+3/occluder = SubResource( 11 )
 3/navigation_offset = Vector2( 32, 32 )
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 4 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 4/name = "OfficeTable2"
@@ -203,12 +203,12 @@ radius = 14.9227
 4/region = Rect2( 1472, 1088, 64, 64 )
 4/is_autotile = false
 4/occluder_offset = Vector2( 32, 32 )
-4/occluder = SubResource( 18 )
+4/occluder = SubResource( 13 )
 4/navigation_offset = Vector2( 32, 32 )
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 5 ),
+"shape": SubResource( 14 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 5/name = "BigOfficeSofa"
@@ -218,12 +218,12 @@ radius = 14.9227
 5/region = Rect2( 896, 1088, 192, 64 )
 5/is_autotile = false
 5/occluder_offset = Vector2( 96, 32 )
-5/occluder = SubResource( 19 )
+5/occluder = SubResource( 15 )
 5/navigation_offset = Vector2( 96, 32 )
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 6 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 96, 32 )
 } ]
 6/name = "OfficePlant"
@@ -233,12 +233,12 @@ radius = 14.9227
 6/region = Rect2( 1600, 258, 64, 62 )
 6/is_autotile = false
 6/occluder_offset = Vector2( 32, 31 )
-6/occluder = SubResource( 20 )
+6/occluder = SubResource( 17 )
 6/navigation_offset = Vector2( 32, 31 )
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 13 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 34.9432, 29.7881 )
 } ]
 7/name = "OfficePlant2"
@@ -248,12 +248,12 @@ radius = 14.9227
 7/region = Rect2( 1280, 384, 64, 64 )
 7/is_autotile = false
 7/occluder_offset = Vector2( 32, 32 )
-7/occluder = SubResource( 21 )
+7/occluder = SubResource( 19 )
 7/navigation_offset = Vector2( 32, 32 )
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 8 ),
+"shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 8/name = "BigOfficeTable"
@@ -263,12 +263,12 @@ radius = 14.9227
 8/region = Rect2( 1280, 1088, 192, 64 )
 8/is_autotile = false
 8/occluder_offset = Vector2( 96, 32 )
-8/occluder = SubResource( 23 )
+8/occluder = SubResource( 21 )
 8/navigation_offset = Vector2( 96, 32 )
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 9 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 96, 32 )
 } ]
 9/name = "SmallOfficePlant"
@@ -278,12 +278,12 @@ radius = 14.9227
 9/region = Rect2( 1152, 512, 64, 64 )
 9/is_autotile = false
 9/occluder_offset = Vector2( 32, 32 )
-9/occluder = SubResource( 22 )
+9/occluder = SubResource( 23 )
 9/navigation_offset = Vector2( 32, 32 )
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 10 ),
+"shape": SubResource( 24 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 10/name = "BigOfficeTV"
@@ -293,12 +293,12 @@ radius = 14.9227
 10/region = Rect2( 1152, 1216, 128, 64 )
 10/is_autotile = false
 10/occluder_offset = Vector2( 64, 32 )
-10/occluder = SubResource( 24 )
+10/occluder = SubResource( 5 )
 10/navigation_offset = Vector2( 64, 32 )
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 11 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 64, 32 )
 } ]
 11/name = "OfficeAquarium"
@@ -308,12 +308,12 @@ radius = 14.9227
 11/region = Rect2( 1472, 320, 128, 64 )
 11/is_autotile = false
 11/occluder_offset = Vector2( 64, 32 )
-11/occluder = SubResource( 25 )
+11/occluder = SubResource( 7 )
 11/navigation_offset = Vector2( 64, 32 )
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
-"shape": SubResource( 12 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 64, 32 )
 } ]
 

@@ -134,7 +134,7 @@ closed = false
 cull_mode = 1
 polygon = PoolVector2Array( -39.0881, -21.6591, 38.6818, -21.8665, 40.9631, -20, 41.7926, 19.196, 39.304, 23.1364, -38.4659, 22.0994, -41.5767, 19.6108, -41.9915, -19.3778 )
 
-[node name="Furniture" type="Node2D" index="0"]
+[node name="Furniture" type="Node2D"]
 
 [node name="OfficeChair" type="Sprite" parent="." index="0"]
 
