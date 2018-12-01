@@ -9,18 +9,10 @@
 
 script = ExtResource( 2 )
 
-[node name="PlayerDetectionArea" parent="." index="0"]
-
-visible = false
-
 [node name="Sprite" parent="." index="3"]
 
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="CollisionShape2D" parent="Sprite/StaticBody2D" index="0"]
-
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="4"]
 
