@@ -13,6 +13,9 @@ var nightvision_off_sfx = "res://SFX/nightvision_off.wav"
 var red_light = "res://GFX/Interface/PNG/dotRed.png"
 var green_light = "res://GFX/Interface/PNG/dotGreen.png"
 
+var button_press_SFX = "res://SFX/twoTone1.ogg"
+var combination_correct_SFX = "res://SFX/threeTone1.ogg"
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here

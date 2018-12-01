@@ -8,6 +8,8 @@ var combination = [2, 3, 5]
 var guess = []
 
 
+signal combination_correct
+
 
 func _ready():
 	connect_buttons()
@@ -22,6 +24,7 @@ func connect_buttons():
 func check_guess():
 	if guess == combination:
 		accept_light.texture = load(Global.green_light)
+		play_sfx(Global.combination_correct_SFX)
 		$Timer.start()
 	else:
 		reset_lock()
@@ -29,6 +32,7 @@ func check_guess():
 
 func entered(button):
 	guess.append(button)
+	play_sfx(Global.button_press_SFX)
 	update_display()
 
 
@@ -49,7 +53,12 @@ func on_Button_Pressed(button):
 	else:
 		entered(int(button))
 
+func play_sfx(number_pad_sfx):
+	$AudioStreamPlayer.stream = load(number_pad_sfx)
+	$AudioStreamPlayer.play()
+
 
 func _on_Timer_timeout():
 	reset_lock()
+	emit_signal("combination_correct")
 	hide()
