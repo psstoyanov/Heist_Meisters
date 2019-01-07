@@ -2,7 +2,7 @@ extends Node
 
 export var lenght = 8
 
-func combination_generator(lenght):
+func generate_combination(lenght):
 	var combination = []
 	
 	for number in range(lenght):
