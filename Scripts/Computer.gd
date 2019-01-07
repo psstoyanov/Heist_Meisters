@@ -7,6 +7,10 @@ export var combination_lenght = 4
 
 func _ready():
 	$Light2D.enabled = false
+	generate_combination()
+	emit_signal("combination", combination)
+
+signal combination
 
 func generate_combination():
 	var combination_generator = get_tree().get_root().find_node("CombinationGenerator", true, false)
@@ -15,7 +19,6 @@ func generate_combination():
 
 func _on_Computer_body_entered(body):
 	can_click = true
-	generate_combination()
 
 func _on_Computer_body_exited(body):
 	can_click = false
