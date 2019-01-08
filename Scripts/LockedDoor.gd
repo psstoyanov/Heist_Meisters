@@ -18,9 +18,11 @@ func _on_NumberPad_combination_correct():
 	open()
 
 
-func _on_Computer_combination(received_combination):
+func _on_Computer_combination(received_combination, lock_group):
 	combination = received_combination
 	$CanvasLayer/NumberPad.combination = combination
+	$Label.rect_rotation = -rotation_degrees
+	$Label.text = lock_group
 
 
 func _on_ExitDetection_body_entered(body):
