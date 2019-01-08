@@ -15,6 +15,7 @@ func _process(delta):
 	if Player_is_in_FOV_TOLERANCE() and Player_is_on_LOS():
 		if $Torch:
 			$Torch.color = RED
+			get_tree().call_group("SuspicionMeter", "player_seen")
 		else:
 			print(String(self.name) + " Torch is missing")
 	else:
