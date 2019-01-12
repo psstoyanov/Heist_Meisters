@@ -124,6 +124,9 @@ tile_data = PoolIntArray( -65540, 17, 0, -65539, 17, 0, -65538, 17, 0, -65537, 1
 [node name="Player" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 1571.13, 1103.77 )
+disguises = 3
+disguise_duration = 5
+disguise_slow_down = 0.25
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
 
