@@ -16,6 +16,12 @@ var green_light = "res://GFX/Interface/PNG/dotGreen.png"
 var button_press_SFX = "res://SFX/twoTone1.ogg"
 var combination_correct_SFX = "res://SFX/threeTone1.ogg"
 
+var disguise_box_sprite = "res://GFX/PNG/Tiles/tile_129.png"
+var disguise_box_occluder = "res://Scenes/Characters/Box_Occluder.tres"
+
+var player_sprite = "res://GFX/PNG/Hitman 1/hitman1_stand.png"
+var character_occluder = "res://Scenes/Characters/Character_Occluder.tres"
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
