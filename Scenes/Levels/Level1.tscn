@@ -124,9 +124,6 @@ tile_data = PoolIntArray( -65540, 17, 0, -65539, 17, 0, -65538, 17, 0, -65537, 1
 [node name="Player" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 1571.13, 1103.77 )
-disguises = 3
-disguise_duration = 5
-disguise_slow_down = 0.25
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2"]
 
@@ -193,6 +190,8 @@ position = Vector2( 508.347, 261.906 )
 rotation = 2.31096
 
 [node name="Guards" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
 
 [node name="Guard" parent="Guards" index="0" instance=ExtResource( 6 )]
 
@@ -339,8 +338,6 @@ bus = "Master"
 [node name="CombinationGenerator" parent="." index="11" instance=ExtResource( 13 )]
 
 [node name="Labels" type="Node2D" parent="." index="12"]
-
-editor/display_folded = true
 
 [node name="Office" type="Label" parent="Labels" index="0" groups=[
 "labels",

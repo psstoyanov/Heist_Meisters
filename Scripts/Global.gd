@@ -22,6 +22,8 @@ var disguise_box_occluder = "res://Scenes/Characters/Box_Occluder.tres"
 var player_sprite = "res://GFX/PNG/Hitman 1/hitman1_stand.png"
 var character_occluder = "res://Scenes/Characters/Character_Occluder.tres"
 
+var small_box_sprite = "res://GFX/PNG/Tiles/tile_157.png"
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here

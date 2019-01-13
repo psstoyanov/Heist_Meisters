@@ -95,6 +95,8 @@ func disguise():
 	collision_layer = 16
 	disguised = true
 	disguises -= 1
+	
+	update_disguise_gui()
 
 
 func reveal():
@@ -108,3 +110,9 @@ func reveal():
 	
 	collision_layer = 1
 	disguised = false
+	
+	update_disguise_gui()
+
+
+func update_disguise_gui():
+	get_tree().call_group("DisguiseItemList", "update_disguises", disguises)
