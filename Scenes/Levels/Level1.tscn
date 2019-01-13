@@ -264,8 +264,6 @@ combination_lenght = 6
 
 [node name="Doors" type="Node2D" parent="." index="7"]
 
-editor/display_folded = true
-
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 513.178, 995.73 )
@@ -431,10 +429,6 @@ margin_bottom = 2129.0
 [node name="Briefcase" parent="." index="15" instance=ExtResource( 17 )]
 
 position = Vector2( 2130.28, 1121.33 )
-
-[node name="Briefcase2" parent="." index="16" instance=ExtResource( 17 )]
-
-position = Vector2( 1501.97, 1120.1 )
 
 [connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
 
