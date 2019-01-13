@@ -24,6 +24,8 @@ var character_occluder = "res://Scenes/Characters/Character_Occluder.tres"
 
 var small_box_sprite = "res://GFX/PNG/Tiles/tile_157.png"
 
+var briefcase_sprite = "res://GFX/Loot/suitcase.png"
+
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
