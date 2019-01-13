@@ -78,6 +78,10 @@ func cycle_vision_mode():
 		vision_mode = DARK
 
 
+func update_disguise_gui():
+	get_tree().call_group("DisguiseItemList", "update_disguises", disguises)
+
+
 func _on_VisionModeTimer_timeout():
 	vision_mode_on_cooldown = false
 
@@ -114,5 +118,7 @@ func reveal():
 	update_disguise_gui()
 
 
-func update_disguise_gui():
-	get_tree().call_group("DisguiseItemList", "update_disguises", disguises)
+func collect_briefcase():
+	var loot = Node.new()
+	loot.set_name("briefcase")
+	add_child(loot)
