@@ -74,7 +74,7 @@ draw_center = true
 [sub_resource type="DynamicFont" id=8]
 
 size = 22
-use_mipmaps = false
+use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
@@ -152,5 +152,5 @@ RichTextLabel/fonts/mono_font = null
 RichTextLabel/fonts/normal_font = null
 RichTextLabel/styles/focus = null
 RichTextLabel/styles/normal = null
-_sections_unfolded = [ "Button/styles", "ItemList", "Label", "Label/fonts", "Label/styles", "Resource" ]
+_sections_unfolded = [ "Button/styles", "ItemList", "ItemList/fonts", "ItemList/icons", "ItemList/styles", "Label", "Label/fonts", "Label/styles", "Resource" ]
 
