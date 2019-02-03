@@ -1,0 +1,43 @@
+{
+	"0":
+	"Welcome to your first day of training, Heist Meister!
+	Please move to the next objective marker.
+	Use [W] [A] [S] [D] keys to move.",
+	"1":
+	"Excellent! Next, we'll practice interacting with other objects.
+	Open the door ahead of you by clicking on it with the mouse.
+	Remember that you'll need to be close enough to open it.",
+	"2":
+	"We've turned off the lights because you'll be working in the dark
+	a lot. You are given a T.O.U.C.A.N. night vision kit.
+	Cycle through your vision modes by pressing [V] key.
+	Move to your next objective in T.O.U.C.A.N. mode",
+ 	"3":
+	"Some doors have keypads that require a code.
+	Your T.O.U.C.A.N. kit can recognize locked doors and computers
+	that are connected.
+	Go to the Secretary computer and see if you can find the code.",
+	"4":
+	"The secretary doesn't have the best of memory.
+	Click on the computer to turn it on. Remeber that you have to be close
+	enough to do so.
+	With the code in your posession, return to the door and unlock it.",
+	"5":
+	"T.O.U.C.A.N. is powerfull tool to get information about the world
+	around you and see better in the dark.
+	But your enemies are using light torches while patrolling.
+	Return to your normal vision mode by pressing the [V] key.",
+	"6":
+	"Don't raise any suspicion by avoid the light from the cameras
+	and the patrolling guards.
+	Use your surroundings to keep yourself in the shadows!",
+	"7":
+	"If the suspicion meter is full, a complete lockdown of the building
+	will be set in place! You won't be able to escape and will be caught.
+       	If your suspicion meter is full, you will have to start from earlier
+	save.",
+	"8":
+	"The loot is in the briefcase ahead. Go and grab it by walking over it!",
+	"9":
+	"Get to the choppa! Grab your spoils and escape to your victory!"
+}

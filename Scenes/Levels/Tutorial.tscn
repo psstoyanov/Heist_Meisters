@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scripts/Tutorial.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/FloorTiles.tres" type="TileSet" id=2]
@@ -8,18 +8,21 @@
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Characters/Guard.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/LockedDoor.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/TutorialGUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Computer.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Characters/SecurityCamera.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Tilesets/AutoTileWalls.tres" type="TileSet" id=12]
-[ext_resource path="res://Scenes/Briefcase.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/VisionMode.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Theme.tres" type="Theme" id=16]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/CombinationGenerator.tscn" type="PackedScene" id=18]
-[ext_resource path="res://GFX/Interface/PNG/crossair_redOutline.png" type="Texture" id=19]
-[ext_resource path="res://SFX/message.wav" type="AudioStream" id=20]
+[ext_resource path="res://Scenes/Briefcase.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Exit.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/LockedDoor.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Tilesets/AutoTileWalls.tres" type="TileSet" id=15]
+[ext_resource path="res://Scenes/VisionMode.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Theme.tres" type="Theme" id=17]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/CombinationGenerator.tscn" type="PackedScene" id=19]
+[ext_resource path="res://GFX/Interface/PNG/crossair_redOutline.png" type="Texture" id=20]
+[ext_resource path="res://SFX/message.wav" type="AudioStream" id=21]
+[ext_resource path="res://GFX/Lightmaps/torchmap.png" type="Texture" id=22]
+[ext_resource path="res://GFX/Lightmaps/radial.png" type="Texture" id=23]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -54,6 +57,11 @@ extents = Vector2( 109.201, 75.2112 )
 custom_solver_bias = 0.0
 extents = Vector2( 95.2673, 86.7943 )
 
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 34.8159, 29.9279 )
+
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
@@ -67,12 +75,7 @@ extents = Vector2( 97.9532, 50.7021 )
 [sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
-extents = Vector2( 78.4802, 61.6136 )
-
-[sub_resource type="RectangleShape2D" id=10]
-
-custom_solver_bias = 0.0
-extents = Vector2( 169.802, 101.567 )
+extents = Vector2( 37.9785, 107.897 )
 
 [node name="Tutorial" type="Node2D" index="0"]
 
@@ -152,7 +155,7 @@ enabled = true
 [node name="Player" parent="." index="3" instance=ExtResource( 6 )]
 
 editor/display_folded = true
-position = Vector2( 185.72, 241.059 )
+position = Vector2( 224.305, 231.746 )
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="7"]
 
@@ -197,37 +200,22 @@ position = Vector2( 1119.86, 223.07 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Computers" type="Node2D" parent="." index="6"]
+[node name="TutorialGUI" parent="." index="6" instance=ExtResource( 9 )]
+
+[node name="Computers" type="Node2D" parent="." index="7"]
 
 editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
-[node name="Computer" parent="Computers" index="0" instance=ExtResource( 9 )]
+[node name="Computer" parent="Computers" index="0" instance=ExtResource( 10 )]
 
 position = Vector2( 1436.9, -96.8864 )
 lock_group = "1"
 
-[node name="Computer2" parent="Computers" index="1" instance=ExtResource( 9 )]
+[node name="Computer2" parent="Computers" index="1" instance=ExtResource( 10 )]
 
 position = Vector2( 469.029, 926.06 )
 lock_group = "Meeting Room"
-
-[node name="LockedDoors" type="Node2D" parent="." index="7"]
-
-editor/display_folded = true
-_sections_unfolded = [ "Transform" ]
-
-[node name="LockedDoor" parent="LockedDoors" index="0" instance=ExtResource( 10 )]
-
-position = Vector2( 1632.47, 415.591 )
-rotation = -1.5708
-_sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform" ]
-
-[node name="LockedDoor2" parent="LockedDoors" index="1" instance=ExtResource( 10 )]
-
-position = Vector2( 799.614, 992.072 )
-rotation = 1.5708
-_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="SecurityCameras" type="Node2D" parent="." index="8"]
 
@@ -238,11 +226,39 @@ editor/display_folded = true
 position = Vector2( 1485.15, 521.675 )
 rotation = 1.5766
 
-[node name="Walls" type="TileMap" parent="." index="9"]
+[node name="Briefcase" parent="." index="9" instance=ExtResource( 12 )]
+
+position = Vector2( 231.085, 1051.67 )
+
+[node name="Exit" parent="." index="10" instance=ExtResource( 13 )]
+
+margin_left = 1154.0
+margin_top = 918.0
+margin_right = 1390.0
+margin_bottom = 1035.0
+
+[node name="LockedDoors" type="Node2D" parent="." index="11"]
+
+editor/display_folded = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="LockedDoor" parent="LockedDoors" index="0" instance=ExtResource( 14 )]
+
+position = Vector2( 1632.47, 415.591 )
+rotation = -1.5708
+_sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform" ]
+
+[node name="LockedDoor2" parent="LockedDoors" index="1" instance=ExtResource( 14 )]
+
+position = Vector2( 799.614, 992.072 )
+rotation = 1.5708
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Walls" type="TileMap" parent="." index="12"]
 
 position = Vector2( -0.88147, 0 )
 mode = 0
-tile_set = ExtResource( 12 )
+tile_set = ExtResource( 15 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -260,24 +276,14 @@ format = 1
 tile_data = PoolIntArray( -262123, 0, 262144, -262122, 0, 262146, -262121, 0, 262146, -262120, 0, 262146, -262119, 0, 262146, -262118, 0, 262146, -262117, 0, 262146, -262116, 0, 262146, -262115, 0, 262145, -196587, 0, 327682, -196579, 0, 327682, -131051, 0, 327682, -131043, 0, 327682, -65515, 0, 327682, -65507, 0, 327682, 0, 0, 262144, 1, 0, 262146, 2, 0, 262146, 3, 0, 262146, 4, 0, 262146, 5, 0, 262146, 6, 0, 262146, 7, 0, 262146, 8, 0, 262146, 9, 0, 262146, 10, 0, 524292, 11, 0, 524293, 12, 0, 262146, 13, 0, 262146, 14, 0, 262146, 15, 0, 524292, 16, 0, 458756, 17, 0, 524293, 18, 0, 262146, 19, 0, 262146, 20, 0, 262146, 21, 0, 262148, 22, 0, 262145, 29, 0, 327682, 65536, 0, 327682, 65546, 0, 393220, 65547, 0, 393221, 65551, 0, 327687, 65552, 0, 458757, 65553, 0, 589827, 65558, 0, 327682, 65565, 0, 327682, 131072, 0, 327682, 131082, 0, 327687, 131083, 0, 327688, 131089, 0, 262150, 131091, 0, 262151, 131092, 0, 262152, 131094, 0, 262150, 131101, 0, 327682, 196608, 0, 327682, 196627, 0, 393220, 196628, 0, 393221, 196637, 0, 327682, 262144, 0, 327682, 262154, 0, 262144, 262155, 0, 262146, 262156, 0, 262146, 262157, 0, 262146, 262158, 0, 262146, 262159, 0, 262146, 262160, 0, 262146, 262161, 0, 262146, 262162, 0, 262146, 262163, 0, 589828, 262164, 0, 589825, 262165, 0, 262146, 262166, 0, 262146, 262167, 0, 262146, 262168, 0, 262146, 262169, 0, 262145, 262173, 0, 327682, 327680, 0, 327682, 327690, 0, 327682, 327700, 0, 327682, 327705, 0, 262150, 327709, 0, 327682, 393216, 0, 327682, 393226, 0, 327682, 393236, 0, 327682, 393245, 0, 327682, 458752, 0, 327682, 458762, 0, 327682, 458772, 0, 327682, 458775, 0, 327686, 458776, 0, 262146, 458777, 0, 262147, 458778, 0, 262146, 458779, 0, 262146, 458780, 0, 262146, 458781, 0, 327681, 524288, 0, 327682, 524298, 0, 327682, 524308, 0, 262150, 524313, 0, 327682, 589824, 0, 327683, 589825, 0, 262146, 589826, 0, 262146, 589827, 0, 262146, 589828, 0, 262146, 589829, 0, 262146, 589830, 0, 262146, 589831, 0, 262146, 589832, 0, 262146, 589833, 0, 262146, 589834, 0, 327681, 589849, 0, 327682, 655360, 0, 327682, 655385, 0, 327682, 720896, 0, 327682, 720910, 0, 262151, 720911, 0, 458756, 720912, 0, 458756, 720913, 0, 458756, 720914, 0, 458756, 720915, 0, 458756, 720916, 0, 262152, 720921, 0, 327682, 786432, 0, 327682, 786446, 0, 393220, 786447, 0, 393222, 786448, 0, 393222, 786449, 0, 393222, 786450, 0, 393222, 786451, 0, 393222, 786452, 0, 393221, 786457, 0, 327682, 851968, 0, 327682, 851975, 0, 327686, 851976, 0, 262146, 851977, 0, 262146, 851978, 0, 262146, 851979, 0, 262146, 851980, 0, 262147, 851981, 0, 262146, 851982, 0, 589828, 851983, 0, 458757, 851984, 0, 458757, 851985, 0, 458757, 851986, 0, 458757, 851987, 0, 458757, 851988, 0, 589829, 851989, 0, 262146, 851990, 0, 262146, 851991, 0, 262146, 851992, 0, 262146, 851993, 0, 393219, 917504, 0, 327682, 917516, 0, 262150, 917529, 0, 327682, 983040, 0, 327682, 983065, 0, 327682, 1048576, 0, 327682, 1048588, 0, 327685, 1048601, 0, 327682, 1114112, 0, 327680, 1114113, 0, 262146, 1114114, 0, 262146, 1114115, 0, 262146, 1114116, 0, 262146, 1114117, 0, 262146, 1114118, 0, 262146, 1114119, 0, 262146, 1114120, 0, 262146, 1114121, 0, 262146, 1114122, 0, 262146, 1114123, 0, 262146, 1114124, 0, 262148, 1114125, 0, 262146, 1114126, 0, 262146, 1114127, 0, 262146, 1114128, 0, 262146, 1114129, 0, 262146, 1114130, 0, 262146, 1114131, 0, 262146, 1114132, 0, 262146, 1114133, 0, 262146, 1114134, 0, 262146, 1114135, 0, 262146, 1114136, 0, 262146, 1114137, 0, 327681 )
 _sections_unfolded = [ "Collision" ]
 
-[node name="Briefcase" parent="." index="10" instance=ExtResource( 13 )]
+[node name="VisionMode" parent="." index="13" instance=ExtResource( 16 )]
 
-position = Vector2( 231.085, 1051.67 )
+color = Color( 0.0246275, 0.0391567, 0.0546875, 1 )
 
-[node name="Exit" parent="." index="11" instance=ExtResource( 14 )]
-
-margin_left = 1154.0
-margin_top = 918.0
-margin_right = 1390.0
-margin_bottom = 1035.0
-
-[node name="VisionMode" parent="." index="12" instance=ExtResource( 15 )]
-
-color = Color( 0.13915, 0.196504, 0.257812, 1 )
-
-[node name="TutorialLabels" type="Node2D" parent="." index="13"]
+[node name="TutorialLabels" type="Node2D" parent="." index="14"]
 
 editor/display_folded = true
+visible = false
 
 [node name="Movement" type="Label" parent="TutorialLabels" index="0"]
 
@@ -298,7 +304,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Move with
@@ -328,7 +334,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Click on the
@@ -357,7 +363,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Toggle Nightvision
@@ -386,7 +392,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Don't raise suspicion
@@ -415,7 +421,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "When your suspicion meter
@@ -444,7 +450,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Grab the loot and escape 
@@ -474,7 +480,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 17 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "You are ready to be
@@ -484,7 +490,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors" ]
 
-[node name="NightvisionLabels" type="Node2D" parent="." index="14"]
+[node name="NightvisionLabels" type="Node2D" parent="." index="15"]
 
 editor/display_folded = true
 
@@ -506,7 +512,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 17 )
 text = "You get more information
 in nightvision mode"
 percent_visible = 1.0
@@ -532,76 +538,20 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 16 )
+theme = ExtResource( 17 )
 text = "Secretary Office"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="LockedDoor" type="Label" parent="NightvisionLabels" index="2" groups=[
-"labels",
-]]
+[node name="GUI" parent="." index="16" instance=ExtResource( 18 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1683.0
-margin_top = 297.0
-margin_right = 1972.0
-margin_bottom = 399.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-theme = ExtResource( 16 )
-text = "Some doors
-require codes.
-Try to find it
-on the secretary
-computer"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Theme" ]
-
-[node name="Label2" type="Label" parent="NightvisionLabels" index="3" groups=[
-"labels",
-]]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1349.0
-margin_top = 396.0
-margin_right = 1638.0
-margin_bottom = 456.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-theme = ExtResource( 16 )
-text = "You can turn off
-nightvision by
-pressing V"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Theme" ]
-
-[node name="GUI" parent="." index="15" instance=ExtResource( 17 )]
-
-[node name="CombinationGenerator" parent="." index="16" instance=ExtResource( 18 )]
+[node name="CombinationGenerator" parent="." index="17" instance=ExtResource( 19 )]
 
 lenght = 4
 
-[node name="ObjectiveMarkers" type="Node2D" parent="." index="17"]
+[node name="ObjectiveMarkers" type="Node2D" parent="." index="18"]
 
 editor/display_folded = true
 
@@ -621,23 +571,27 @@ position = Vector2( 1658.12, 417.148 )
 
 position = Vector2( 1549.84, -92.3393 )
 
-[node name="ObjectiveCamera" type="Position2D" parent="ObjectiveMarkers" index="4"]
+[node name="ObjectiveUnlockedDoor" type="Position2D" parent="ObjectiveMarkers" index="4"]
+
+position = Vector2( 1569.31, 421.54 )
+
+[node name="ObjectiveCamera" type="Position2D" parent="ObjectiveMarkers" index="5"]
 
 position = Vector2( 1386.17, 616.915 )
 
-[node name="ObjectiveGuard" type="Position2D" parent="ObjectiveMarkers" index="5"]
+[node name="ObjectiveGuard" type="Position2D" parent="ObjectiveMarkers" index="6"]
 
 position = Vector2( 801.979, 658.882 )
 
-[node name="ObjectiveLoot" type="Position2D" parent="ObjectiveMarkers" index="6"]
+[node name="ObjectiveLoot" type="Position2D" parent="ObjectiveMarkers" index="7"]
 
 position = Vector2( 154.837, 1013.09 )
 
-[node name="ObjectiveExit" type="Position2D" parent="ObjectiveMarkers" index="7"]
+[node name="ObjectiveExit" type="Position2D" parent="ObjectiveMarkers" index="8"]
 
 position = Vector2( 1363.51, 1009.73 )
 
-[node name="ObjectiveAreas" type="Node2D" parent="." index="18"]
+[node name="ObjectiveAreas" type="Node2D" parent="." index="19"]
 
 editor/display_folded = true
 
@@ -717,7 +671,25 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( -50.3613, -17.6264 )
 shape = SubResource( 6 )
 
-[node name="ObjectiveCamera" type="Area2D" parent="ObjectiveAreas" index="4"]
+[node name="ObjectiveUnlockedDoor" type="Area2D" parent="ObjectiveAreas" index="4"]
+
+editor/display_folded = true
+position = Vector2( 1568.32, 417.877 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveAreas/ObjectiveUnlockedDoor" index="0"]
+
+shape = SubResource( 11 )
+
+[node name="ObjectiveCamera" type="Area2D" parent="ObjectiveAreas" index="5"]
 
 editor/display_folded = true
 position = Vector2( 1384.09, 590.905 )
@@ -736,7 +708,7 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( -20.9839, 36.0922 )
 shape = SubResource( 7 )
 
-[node name="ObjectiveGuard" type="Area2D" parent="ObjectiveAreas" index="5"]
+[node name="ObjectiveGuard" type="Area2D" parent="ObjectiveAreas" index="6"]
 
 editor/display_folded = true
 position = Vector2( 794.868, 649.66 )
@@ -755,10 +727,10 @@ _sections_unfolded = [ "Collision" ]
 position = Vector2( 4.19678, 6.71484 )
 shape = SubResource( 8 )
 
-[node name="ObjectiveLoot" type="Area2D" parent="ObjectiveAreas" index="6"]
+[node name="ObjectiveLoot" type="Area2D" parent="ObjectiveAreas" index="7"]
 
 editor/display_folded = true
-position = Vector2( 221.589, 1014.78 )
+position = Vector2( 566.189, 719.408 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -771,39 +743,20 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveAreas/ObjectiveLoot" index="0"]
 
-position = Vector2( 1.67877, 32.7348 )
+position = Vector2( -79.4816, 19.4299 )
 shape = SubResource( 9 )
 
-[node name="ObjectiveExit" type="Area2D" parent="ObjectiveAreas" index="7"]
-
-editor/display_folded = true
-position = Vector2( 1364.79, 1013.94 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-collision_layer = 0
-audio_bus_override = false
-audio_bus_name = "Master"
-_sections_unfolded = [ "Collision" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveAreas/ObjectiveExit" index="0"]
-
-position = Vector2( -84.7748, -26.8593 )
-shape = SubResource( 10 )
-
-[node name="ObjectivePointer" type="Sprite" parent="." index="19"]
+[node name="ObjectivePointer" type="Sprite" parent="." index="20"]
 
 editor/display_folded = true
 position = Vector2( 303.007, 256.842 )
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 
 [node name="Light2D" type="Light2D" parent="ObjectivePointer" index="0"]
 
 enabled = true
 editor_only = false
-texture = ExtResource( 19 )
+texture = ExtResource( 20 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 0.666667 )
@@ -823,16 +776,16 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="20"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="21"]
 
-stream = ExtResource( 20 )
+stream = ExtResource( 21 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Tween" type="Tween" parent="." index="21"]
+[node name="Tween" type="Tween" parent="." index="22"]
 
 repeat = false
 playback_process_mode = 1
@@ -841,9 +794,66 @@ playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
+[node name="Light2D2" type="Light2D" parent="." index="23"]
+
+position = Vector2( 776.347, 150.254 )
+rotation = 0.317646
+scale = Vector2( 0.638677, 0.659501 )
+enabled = true
+editor_only = false
+texture = ExtResource( 22 )
+offset = Vector2( 300, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow", "Transform" ]
+
+[node name="Light2D" type="Light2D" parent="." index="24"]
+
+position = Vector2( 405.83, 215.476 )
+scale = Vector2( 1.65702, 1.22432 )
+enabled = true
+editor_only = false
+texture = ExtResource( 23 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow" ]
+
 [connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
 
 [connection signal="combination" from="Computers/Computer2" to="LockedDoors/LockedDoor2" method="_on_Computer_combination"]
+
+[connection signal="body_entered" from="Briefcase" to="." method="_on_Briefcase_body_entered"]
 
 [connection signal="body_entered" from="ObjectiveAreas/ObjectiveMove" to="." method="_on_ObjectiveMove_body_entered"]
 
@@ -853,12 +863,12 @@ playback/speed = 1.0
 
 [connection signal="body_entered" from="ObjectiveAreas/ObjectiveComputer" to="." method="_on_ObjectiveComputer_body_entered"]
 
+[connection signal="body_entered" from="ObjectiveAreas/ObjectiveUnlockedDoor" to="." method="_on_ObjectiveUnlockedDoor_body_entered"]
+
 [connection signal="body_entered" from="ObjectiveAreas/ObjectiveCamera" to="." method="_on_ObjectiveCamera_body_entered"]
 
 [connection signal="body_entered" from="ObjectiveAreas/ObjectiveGuard" to="." method="_on_ObjectiveGuard_body_entered"]
 
 [connection signal="body_entered" from="ObjectiveAreas/ObjectiveLoot" to="." method="_on_ObjectiveLoot_body_entered"]
-
-[connection signal="body_entered" from="ObjectiveAreas/ObjectiveExit" to="." method="_on_ObjectiveExit_body_entered"]
 
 

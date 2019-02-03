@@ -2,7 +2,7 @@ extends CanvasModulate
 
 # Lighter default for testing: 3a4897
 # Default dark vision mode: 233241
-const DARK = Color("233241")
+const DARK = Color("06090d")
 const NIGHTVISION = Color("00ac6b")
 
 
