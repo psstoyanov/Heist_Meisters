@@ -7,4 +7,4 @@ func _on_TryAgain_pressed():
 
 
 func _on_Quit_pressed():
-	get_tree().quit()
+	get_tree().change_scene("res://Scenes/Levels/SplashScreen.tscn")

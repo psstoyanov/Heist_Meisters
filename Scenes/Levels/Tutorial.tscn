@@ -57,27 +57,27 @@ extents = Vector2( 109.201, 75.2112 )
 custom_solver_bias = 0.0
 extents = Vector2( 95.2673, 86.7943 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 34.8159, 29.9279 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 65.3862, 127.419 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 97.9532, 50.7021 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=10]
 
 custom_solver_bias = 0.0
 extents = Vector2( 37.9785, 107.897 )
 
-[node name="Tutorial" type="Node2D" index="0"]
+[node name="Tutorial" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -687,7 +687,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveAreas/ObjectiveUnlockedDoor" index="0"]
 
-shape = SubResource( 11 )
+shape = SubResource( 7 )
 
 [node name="ObjectiveCamera" type="Area2D" parent="ObjectiveAreas" index="5"]
 
@@ -706,7 +706,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveAreas/ObjectiveCamera" index="0"]
 
 position = Vector2( -20.9839, 36.0922 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="ObjectiveGuard" type="Area2D" parent="ObjectiveAreas" index="6"]
 
@@ -725,7 +725,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveAreas/ObjectiveGuard" index="0"]
 
 position = Vector2( 4.19678, 6.71484 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="ObjectiveLoot" type="Area2D" parent="ObjectiveAreas" index="7"]
 
@@ -744,7 +744,7 @@ _sections_unfolded = [ "Collision" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveAreas/ObjectiveLoot" index="0"]
 
 position = Vector2( -79.4816, 19.4299 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="ObjectivePointer" type="Sprite" parent="." index="20"]
 

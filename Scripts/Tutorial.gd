@@ -23,6 +23,7 @@ func update_pointer_position(number):
 	var pointer = $ObjectivePointer
 	var marker = $ObjectiveMarkers.get_child(number)
 	$AudioStreamPlayer.play()
+	Message_Transition(text[str(number)])
 	$Tween.interpolate_property(pointer, "position", pointer.position,
 			 marker.position, 2.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	$Tween.start()
@@ -65,7 +66,10 @@ func Nightvision_Mode():
 func Darkvision_Mode():
 	$TutorialGUI/Popup.show()
 
-
+func Message_Transition(new_text):
+	$TutorialGUI/AnimationPlayer.play("MessageTransitionStart")
+	$TutorialGUI/Popup/NinePatchRect/RichTextLabel.bbcode_text = new_text
+	$TutorialGUI/AnimationPlayer.play("MessageTransitionEnd")
 
 func _on_Briefcase_body_entered(body):
 	$TutorialGUI/Popup/NinePatchRect/RichTextLabel.bbcode_text = text[str(9)]
